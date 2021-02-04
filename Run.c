@@ -57,6 +57,7 @@ void runTempPresHeight( void )
 	xTaskCreate(getPressureTask, "getPressureTask", 200, (void *)0, tskIDLE_PRIORITY, &pressureHandl);
 	xTaskCreate(getHeightTask, "getHeightTask", 200, (void *)0, tskIDLE_PRIORITY, &heightHandl);
 	printf("Hi Ganesh");
+	printf("Hi Aditya");
 	vTaskStartScheduler();
 	while(1);
 }
