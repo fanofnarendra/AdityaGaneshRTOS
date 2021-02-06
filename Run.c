@@ -12,7 +12,7 @@ TaskHandle_t edfHandl = NULL;
 
 TaskHandle_t* sortedTaskHandles[3];
 
-
+//task which reads temperature periodically
 void getTemperatureTask(void *p)
 {
 	int temperature;
@@ -28,6 +28,7 @@ void getTemperatureTask(void *p)
 	}
 }
 
+//task which reads Pressure periodically
 void getPressureTask(void *p)
 {
 	int pressure;
@@ -43,6 +44,7 @@ void getPressureTask(void *p)
 	}
 }
 
+//task which reads Height periodically
 void getHeightTask(void *p)
 {
 	int height;
@@ -58,6 +60,7 @@ void getHeightTask(void *p)
 	}
 }
 
+//sort task according to deadlines and store
 void sortTasks()
 {
 	if(deadlineTEMPERATURE == deadlinePRESSURE)
@@ -156,7 +159,7 @@ void sortTasks()
 void vScheduleEDF(void *p)
 {
 	long tick;
-	//period of this EDF task min of all task periods AND
+	//period of this EDF task GCD of all task periods
 	int periodEDF = gcdThree(periodTEMPERATURE, periodPRESSURE, periodHEIGHT);
 
 	while(1)
