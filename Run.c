@@ -157,7 +157,7 @@ void vScheduleEDF(void *p)
 {
 	long tick;
 	//period of this EDF task min of all task periods AND
-	int periodEDF = getMinimum(periodTEMPERATURE, periodPRESSURE, periodHEIGHT);
+	int periodEDF = gcdThree(periodTEMPERATURE, periodPRESSURE, periodHEIGHT);
 
 	while(1)
 	{
