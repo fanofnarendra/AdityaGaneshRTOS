@@ -21,7 +21,7 @@ void getTemperatureTask(void *p)
 	{
 		tick = xTaskGetTickCount();
 		temperature = getTemperature();
-		printf("tick: %ld\t deadline: %ld\t temperature: %d \n\r", tick, deadlineTEMPERATURE, temperature);
+		printf("tick: %ld\t deadline: %ld\t temperature: %d \n", tick, deadlineTEMPERATURE, temperature);
 		fflush(stdout);
 		deadlineTEMPERATURE += periodTEMPERATURE;
 		vTaskDelay(periodTEMPERATURE/portTICK_PERIOD_MS);
@@ -37,7 +37,7 @@ void getPressureTask(void *p)
 	{
 		tick = xTaskGetTickCount();
 		pressure = getPressure();
-		printf("tick: %ld\t deadline: %ld\t pressure: %d \n\r", tick, deadlinePRESSURE, pressure);
+		printf("tick: %ld\t deadline: %ld\t pressure: %d \n", tick, deadlinePRESSURE, pressure);
 		fflush(stdout);
 		deadlinePRESSURE += periodPRESSURE;
 		vTaskDelay(periodPRESSURE/portTICK_PERIOD_MS);
@@ -53,7 +53,7 @@ void getHeightTask(void *p)
 	{
 		tick = xTaskGetTickCount();
 		height = getHeight();
-		printf("tick: %ld\t deadline: %ld\t height: %d \n\r", tick, deadlineHEIGHT, height);
+		printf("tick: %ld\t deadline: %ld\t height: %d \n", tick, deadlineHEIGHT, height);
 		fflush(stdout);
 		deadlineHEIGHT += periodHEIGHT;
 		vTaskDelay(periodHEIGHT/portTICK_PERIOD_MS);
@@ -165,7 +165,7 @@ void vScheduleEDF(void *p)
 	while(1)
 	{
 		tick = xTaskGetTickCount();
-		printf("-----tick: %ld\t----EDF---------\n\r", tick);
+		printf("\n-----tick: %ld\t----EDF---------\n", tick);
 		fflush(stdout);
 		//sort tasks according to deadlines
 		sortTasks();
@@ -174,6 +174,10 @@ void vScheduleEDF(void *p)
 		vTaskPrioritySet(*sortedTaskHandles[0], tskIDLE_PRIORITY+2);
 		vTaskPrioritySet(*sortedTaskHandles[1], tskIDLE_PRIORITY+1);
 		vTaskPrioritySet(*sortedTaskHandles[2], tskIDLE_PRIORITY);
+		printf("Task:\t\tPriority\tDeadline\n");
+		printf("Temperature:\t%d\t\t%d\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
+		printf("Pressure:\t%d\t\t%d\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
+		printf("Height:\t\t%d\t\t%d\n\r", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
 
 		vTaskDelay(periodEDF);
 	}

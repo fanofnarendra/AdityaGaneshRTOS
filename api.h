@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include<time.h>
 
-#define periodTEMPERATURE 400	//period in milliseconds
-#define periodPRESSURE 600		//period in milliseconds
-#define periodHEIGHT 800		//period in milliseconds
+#define periodTEMPERATURE 500	//period in milliseconds
+#define periodPRESSURE 1000		//period in milliseconds
+#define periodHEIGHT 1500		//period in milliseconds
 
 static long int deadlineTEMPERATURE = periodTEMPERATURE;		//Deadline of getTemperature()
 static long int deadlinePRESSURE = periodPRESSURE;				//Deadline of getPressure()
