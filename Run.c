@@ -3,6 +3,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include <api.h>
+#include <linkedlist.h>
 
 TaskHandle_t temperatureHandl = NULL;
 TaskHandle_t pressureHandl = NULL;
@@ -167,17 +168,28 @@ void vScheduleEDF(void *p)
 		tick = xTaskGetTickCount();
 		printf("\n-----tick: %ld\t----EDF---------\n", tick);
 		fflush(stdout);
+
+		//making linked list
+		struct LinkedlistNode *head = NULL;
+        insertAtTheBegin(&head, &heightHandl, deadlineHEIGHT);
+        insertAtTheBegin(&head, &pressureHandl, deadlinePRESSURE);
+        insertAtTheBegin(&head, &temperatureHandl, deadlineTEMPERATURE);
+
 		//sort tasks according to deadlines
-		sortTasks();
+        bubbleSort(head);
 
 		//set priorities
-		vTaskPrioritySet(*sortedTaskHandles[0], tskIDLE_PRIORITY+2);
-		vTaskPrioritySet(*sortedTaskHandles[1], tskIDLE_PRIORITY+1);
-		vTaskPrioritySet(*sortedTaskHandles[2], tskIDLE_PRIORITY);
+//		vTaskPrioritySet(*sortedTaskHandles[0], tskIDLE_PRIORITY+2);
+//		vTaskPrioritySet(*sortedTaskHandles[1], tskIDLE_PRIORITY+1);
+//		vTaskPrioritySet(*sortedTaskHandles[2], tskIDLE_PRIORITY);
+		vTaskPrioritySet(*(head->taskHandl), tskIDLE_PRIORITY+2);
+		vTaskPrioritySet(*(head->next->taskHandl), tskIDLE_PRIORITY+1);
+		vTaskPrioritySet(*(head->next->next->taskHandl), tskIDLE_PRIORITY);
+
 		printf("Task:\t\tPriority\tDeadline\n");
-		printf("Temperature:\t%d\t\t%d\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
-		printf("Pressure:\t%d\t\t%d\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
-		printf("Height:\t\t%d\t\t%d\n\r", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
+		printf("Temperature:\t%lu\t\t%ld\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
+		printf("Pressure:\t%lu\t\t%ld\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
+		printf("Height:\t\t%lu\t\t%ld\n\r", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
 
 		vTaskDelay(periodEDF);
 	}
