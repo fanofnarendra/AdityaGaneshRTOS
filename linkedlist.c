@@ -1,7 +1,7 @@
 #include <linkedlist.h>
 
 /* Function to insert a LinkedlistNode at the beginning of a linked list */
-void insertAtTheBegin(struct LinkedlistNode **head_ref, TaskHandle_t *taskHandl, long int deadline)
+void insertAtTheBegin(struct LinkedlistNode **head_ref, TaskHandle_t *taskHandl, long int *deadline)
 {
     struct LinkedlistNode *ptr1 = (struct LinkedlistNode*)malloc(sizeof(struct LinkedlistNode));
     ptr1->taskHandl = taskHandl;
@@ -17,13 +17,14 @@ void printList(struct LinkedlistNode *head)
     printf("\n");
     while (temp!=NULL)
     {
-        printf("%lu ", temp->deadline);
+        printf("%lu\t", *(temp->deadline));
         temp = temp->next;
     }
+    printf("\n");
 }
 
 /* Bubble sort the given linked list */
-void bubbleSort(struct LinkedlistNode *head)
+void bubbleSortLinkedList(struct LinkedlistNode *head)
 {
     int swapped, i;
     struct LinkedlistNode *ptr1;
@@ -40,7 +41,7 @@ void bubbleSort(struct LinkedlistNode *head)
 
         while (ptr1->next != lptr)
         {
-            if (ptr1->deadline > ptr1->next->deadline)
+            if (*(ptr1->deadline) > *(ptr1->next->deadline))
             {
                 swap(ptr1, ptr1->next);
                 swapped = 1;
@@ -56,9 +57,31 @@ void bubbleSort(struct LinkedlistNode *head)
 void swap(struct LinkedlistNode *a, struct LinkedlistNode *b)
 {
     TaskHandle_t* tempTaskHandl = a->taskHandl;
-    long int tempDeadline = a->deadline;
+    long int *tempDeadline = a->deadline;
     a->taskHandl = b->taskHandl;
     a->deadline = b->deadline;
     b->taskHandl = tempTaskHandl;
     b->deadline = tempDeadline;
+}
+
+/* Function to find GCD of numbers*/
+long int gcdLinkedList(struct LinkedlistNode* head)
+{
+	long int gcd = 1;
+	struct LinkedlistNode* ptr = NULL;
+	if(head != NULL)
+	{
+		gcd = *(head->deadline);
+		if(head->next != NULL)
+		{
+			ptr = head->next;
+			while(ptr != NULL)
+			{
+				gcd = gcdTwo(gcd, *(ptr->deadline));
+				ptr = ptr->next;
+			}
+		}
+	}
+
+	return gcd;
 }

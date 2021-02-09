@@ -2,16 +2,16 @@
 #include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
-#include <api.h>
 #include <linkedlist.h>
 
 TaskHandle_t temperatureHandl = NULL;
 TaskHandle_t pressureHandl = NULL;
 TaskHandle_t heightHandl = NULL;
+TaskHandle_t angleHandl = NULL;
 
 TaskHandle_t edfHandl = NULL;
 
-TaskHandle_t* sortedTaskHandles[3];
+//TaskHandle_t* sortedTaskHandles[3];
 
 //task which reads temperature periodically
 void getTemperatureTask(void *p)
@@ -61,7 +61,24 @@ void getHeightTask(void *p)
 	}
 }
 
+//task which reads Angle periodically
+void getAngleTask(void *p)
+{
+	int angle;
+	long tick;
+	while(1)
+	{
+		tick = xTaskGetTickCount();
+		angle = getAngle();
+		printf("tick: %ld\t deadline: %ld\t angle: %d \n", tick, deadlineHEIGHT, angle);
+		fflush(stdout);
+		deadlineANGLE += periodANGLE;
+		vTaskDelay(periodANGLE/portTICK_PERIOD_MS);
+	}
+}
+
 //sort task according to deadlines and store
+/*
 void sortTasks()
 {
 	if(deadlineTEMPERATURE == deadlinePRESSURE)
@@ -156,12 +173,27 @@ void sortTasks()
 	}
 
 }
+*/
+
+void printPriorityDeadlines()
+{
+	printf("Task:\t\tPriority\tDeadline\n");
+	printf("Temperature:\t%lu\t\t%ld\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
+	printf("Pressure:\t%lu\t\t%ld\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
+	printf("Height:\t\t%lu\t\t%ld\n", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
+	//printf("Angle:\t\t%lu\t\t%ld\n\r", uxTaskPriorityGet(angleHandl), deadlineANGLE);
+}
 
 void vScheduleEDF(void *p)
 {
 	long tick;
+	struct LinkedlistNode* head = (struct LinkedlistNode*)p;
+	struct LinkedlistNode* ptr = NULL;
+	struct LinkedlistNode* newLinkedlistHead = NULL;
+	int priority = 2;
+
 	//period of this EDF task GCD of all task periods
-	int periodEDF = gcdThree(periodTEMPERATURE, periodPRESSURE, periodHEIGHT);
+	int periodEDF = gcdLinkedList(head);
 
 	while(1)
 	{
@@ -169,27 +201,28 @@ void vScheduleEDF(void *p)
 		printf("\n-----tick: %ld\t----EDF---------\n", tick);
 		fflush(stdout);
 
-		//making linked list
-		struct LinkedlistNode *head = NULL;
-        insertAtTheBegin(&head, &heightHandl, deadlineHEIGHT);
-        insertAtTheBegin(&head, &pressureHandl, deadlinePRESSURE);
-        insertAtTheBegin(&head, &temperatureHandl, deadlineTEMPERATURE);
+		//create new linked list
+		ptr = head;
+		newLinkedlistHead = NULL;
+		while(ptr != NULL)
+		{
+			insertAtTheBegin(&newLinkedlistHead, ptr->taskHandl, ptr->deadline);
+			ptr = ptr->next;
+		}
 
 		//sort tasks according to deadlines
-        bubbleSort(head);
+        bubbleSortLinkedList(newLinkedlistHead);
 
 		//set priorities
-//		vTaskPrioritySet(*sortedTaskHandles[0], tskIDLE_PRIORITY+2);
-//		vTaskPrioritySet(*sortedTaskHandles[1], tskIDLE_PRIORITY+1);
-//		vTaskPrioritySet(*sortedTaskHandles[2], tskIDLE_PRIORITY);
-		vTaskPrioritySet(*(head->taskHandl), tskIDLE_PRIORITY+2);
-		vTaskPrioritySet(*(head->next->taskHandl), tskIDLE_PRIORITY+1);
-		vTaskPrioritySet(*(head->next->next->taskHandl), tskIDLE_PRIORITY);
-
-		printf("Task:\t\tPriority\tDeadline\n");
-		printf("Temperature:\t%lu\t\t%ld\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
-		printf("Pressure:\t%lu\t\t%ld\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
-		printf("Height:\t\t%lu\t\t%ld\n\r", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
+        ptr = newLinkedlistHead;
+        priority = 2;
+        while(ptr != NULL)
+        {
+			vTaskPrioritySet(*(ptr->taskHandl), configMAX_PRIORITIES - priority++);
+			ptr = ptr->next;
+        }
+		//print priorities and deadlines
+		printPriorityDeadlines();
 
 		vTaskDelay(periodEDF);
 	}
@@ -201,9 +234,17 @@ void runTempPresHeight( void )
 	xTaskCreate(getTemperatureTask, "getTemperatureTask", 200, (void *)0, tskIDLE_PRIORITY, &temperatureHandl);
 	xTaskCreate(getPressureTask, "getPressureTask", 200, (void *)0, tskIDLE_PRIORITY, &pressureHandl);
 	xTaskCreate(getHeightTask, "getHeightTask", 200, (void *)0, tskIDLE_PRIORITY, &heightHandl);
+	//xTaskCreate(getAngleTask, "getAngleTask", 200, (void *)0, tskIDLE_PRIORITY, &angleHandl);
+
+	//making linked list
+	struct LinkedlistNode *head = NULL;
+    insertAtTheBegin(&head, &heightHandl, &deadlineHEIGHT);
+    insertAtTheBegin(&head, &pressureHandl, &deadlinePRESSURE);
+    insertAtTheBegin(&head, &temperatureHandl, &deadlineTEMPERATURE);
+    //insertAtTheBegin(&head, &angleHandl, &deadlineANGLE);
 
 	//EDF Task: priority is highest
-	xTaskCreate(vScheduleEDF, "edfTask", 1000, (void *)0, configMAX_PRIORITIES-1, &edfHandl);
+	xTaskCreate(vScheduleEDF, "edfTask", 1000, head, configMAX_PRIORITIES-1, &edfHandl);
 
 	printf("Hi Ganesh");
 	printf("Hi Aditya\n");
