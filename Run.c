@@ -189,7 +189,6 @@ void vScheduleEDF(void *p)
 	long tick;
 	struct LinkedlistNode* head = (struct LinkedlistNode*)p;
 	struct LinkedlistNode* ptr = NULL;
-	struct LinkedlistNode* newLinkedlistHead = NULL;
 	int priority = 2;
 
 	//period of this EDF task GCD of all task periods
@@ -201,26 +200,16 @@ void vScheduleEDF(void *p)
 		printf("\n-----tick: %ld\t----EDF---------\n", tick);
 		fflush(stdout);
 
-		//create new linked list
-		ptr = head;
-		newLinkedlistHead = NULL;
-		while(ptr != NULL)
-		{
-			insertAtTheBegin(&newLinkedlistHead, ptr->taskHandl, ptr->deadline);
-			ptr = ptr->next;
-		}
+        bubbleSortLinkedList(head);
 
-		//sort tasks according to deadlines
-        bubbleSortLinkedList(newLinkedlistHead);
-
-		//set priorities
-        ptr = newLinkedlistHead;
+        ptr = head;
         priority = 2;
         while(ptr != NULL)
         {
 			vTaskPrioritySet(*(ptr->taskHandl), configMAX_PRIORITIES - priority++);
 			ptr = ptr->next;
         }
+
 		//print priorities and deadlines
 		printPriorityDeadlines();
 

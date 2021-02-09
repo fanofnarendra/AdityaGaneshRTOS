@@ -646,384 +646,385 @@ LOAD c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
  .text          0x00410628      0x100 Run-time-stats-utils.o
                 0x00410628                vConfigureTimerForRunTimeStats
                 0x004106a5                ulGetRunTimeCounterValue
- .text          0x00410728      0x470 Run.o
+ .text          0x00410728      0x42c Run.o
                 0x00410728                getTemperatureTask
                 0x0041078e                getPressureTask
                 0x004107f4                getHeightTask
                 0x0041085a                getAngleTask
                 0x004108c0                printPriorityDeadlines
                 0x0041094f                vScheduleEDF
-                0x00410a4a                runTempPresHeight
- .text          0x00410b98      0xbcc Standard_Demo_Tasks\AbortDelay.o
-                0x00410b98                vCreateAbortDelayTasks
-                0x00411700                xAreAbortDelayTestTasksStillRunning
- .text          0x00411764      0x41c Standard_Demo_Tasks\BlockQ.o
-                0x00411764                vStartBlockingQueueTasks
-                0x00411ae9                xAreBlockingQueuesStillRunning
- .text          0x00411b80      0xf20 Standard_Demo_Tasks\EventGroupsDemo.o
-                0x00411b80                vStartEventGroupTasks
-                0x004128fc                vPeriodicEventGroupsProcessing
-                0x00412a2e                xAreEventGroupTasksStillRunning
- .text          0x00412aa0      0xea8 Standard_Demo_Tasks\GenQTest.o
-                0x00412aa0                vStartGenericQueueTasks
-                0x004138f0                xAreGenericQueueTasksStillRunning
- .text          0x00413948      0x830 Standard_Demo_Tasks\IntSemTest.o
-                0x00413948                vStartInterruptSemaphoreTasks
-                0x0041405d                vInterruptSemaphorePeriodicTest
-                0x00414116                xAreInterruptSemaphoreTasksStillRunning
- .text          0x00414178      0x354 Standard_Demo_Tasks\MessageBufferAMP.o
-                0x00414178                vStartMessageBufferAMPTasks
-                0x004143e3                vGenerateCoreBInterrupt
-                0x00414472                xAreMessageBufferAMPTasksStillRunning
- .text          0x004144cc     0x1440 Standard_Demo_Tasks\MessageBufferDemo.o
-                0x004144cc                vStartMessageBufferTasks
-                0x00415848                xAreMessageBufferTasksStillRunning
- .text          0x0041590c      0x218 Standard_Demo_Tasks\PollQ.o
-                0x0041590c                vStartPolledQueueTasks
-                0x00415ae0                xArePollingQueuesStillRunning
- .text          0x00415b24      0x570 Standard_Demo_Tasks\QPeek.o
-                0x00415b24                vStartQueuePeekTasks
-                0x0041605f                xAreQueuePeekTasksStillRunning
- .text          0x00416094      0x334 Standard_Demo_Tasks\QueueOverwrite.o
-                0x00416094                vStartQueueOverwriteTask
-                0x00416266                xIsQueueOverwriteTaskStillRunning
-                0x004162a7                vQueueOverwritePeriodicISRDemo
- .text          0x004163c8     0x1244 Standard_Demo_Tasks\QueueSet.o
-                0x004163c8                vStartQueueSetTasks
-                0x00416450                xAreQueueSetTasksStillRunning
-                0x00416736                vQueueSetAccessQueueSetFromISR
- .text          0x0041760c      0x1ac Standard_Demo_Tasks\QueueSetPolling.o
-                0x0041760c                vStartQueueSetPollingTask
-                0x00417729                vQueueSetPollingInterruptAccess
-                0x0041778a                xAreQueueSetPollTasksStillRunning
- .text          0x004177b8      0xeec Standard_Demo_Tasks\StaticAllocation.o
-                0x004177b8                vStartStaticallyAllocatedTasks
-                0x00418658                xAreStaticAllocationTasksStillRunning
- .text          0x004186a4     0x1fdc Standard_Demo_Tasks\StreamBufferDemo.o
-                0x004186a4                vStartStreamBufferTasks
-                0x0041a329                vPeriodicStreamBufferProcessing
-                0x0041a590                xAreStreamBufferTasksStillRunning
- .text          0x0041a680      0x274 Standard_Demo_Tasks\StreamBufferInterrupt.o
-                0x0041a680                vStartStreamBufferInterruptDemo
-                0x0041a829                vBasicStreamBufferSendFromISR
-                0x0041a8c0                xIsInterruptStreamBufferDemoStillRunning
- .text          0x0041a8f4     0x1328 Standard_Demo_Tasks\TaskNotify.o
-                0x0041a8f4                vStartTaskNotifyTask
-                0x0041ba1f                xNotifyTaskFromISR
-                0x0041bb7e                xAreTaskNotificationTasksStillRunning
- .text          0x0041bc1c     0x1860 Standard_Demo_Tasks\TimerDemo.o
-                0x0041bc1c                vStartTimerDemoTask
-                0x0041bdab                xAreTimerDemoTasksStillRunning
-                0x0041ca60                vTimerPeriodicISRTests
- .text          0x0041d47c      0x86c Standard_Demo_Tasks\blocktim.o
-                0x0041d47c                vCreateBlockTimeTasks
-                0x0041dc83                xAreBlockTimeTestTasksStillRunning
- .text          0x0041dce8      0x3c0 Standard_Demo_Tasks\countsem.o
-                0x0041dce8                vStartCountingSemaphoreTasks
-                0x0041e03f                xAreCountingSemaphoreTasksStillRunning
- .text          0x0041e0a8      0x1f0 Standard_Demo_Tasks\death.o
-                0x0041e0a8                vCreateSuicidalTasks
-                0x0041e219                xIsCreateTaskStillRunning
- .text          0x0041e298      0x50c Standard_Demo_Tasks\dynamic.o
-                0x0041e298                vStartDynamicPriorityTasks
-                0x0041e729                xAreDynamicPriorityTasksStillRunning
- .text          0x0041e7a4      0x468 Standard_Demo_Tasks\flop.o
-                0x0041e7a4                vStartMathTasks
-                0x0041ebbf                xAreMathsTaskStillRunning
- .text          0x0041ec0c      0x130 Standard_Demo_Tasks\integer.o
-                0x0041ec0c                vStartIntegerMathTasks
-                0x0041ecea                xAreIntegerMathsTaskStillRunning
- .text          0x0041ed3c      0x3d8 Standard_Demo_Tasks\semtest.o
-                0x0041ed3c                vStartSemaphoreTasks
-                0x0041f0b7                xAreSemaphoreTasksStillRunning
- .text          0x0041f114      0x150 TestTasks.o
-                0x0041f114                myTask1
-                0x0041f17f                myTask2
-                0x0041f1ea                main_TestTasks
- .text          0x0041f264      0x1dc api.o
-                0x0041f264                getTemperature
-                0x0041f2b1                getPressure
-                0x0041f2f7                getHeight
-                0x0041f339                getAngle
-                0x0041f380                gcdTwo
-                0x0041f3ab                gcdThree
-                0x0041f3f1                lcm
-                0x0041f417                getMinimum
- .text          0x0041f440      0xb34 code_coverage_additions.o
-                0x0041ff2a                xRunCodeCoverageTestAdditions
- .text          0x0041ff74      0x1b0 linkedlist.o
-                0x0041ff74                insertAtTheBegin
-                0x0041ffb0                printList
-                0x00420000                bubbleSortLinkedList
-                0x0042007a                swap
-                0x004200bb                gcdLinkedList
- .text          0x00420124      0x590 main.o
-                0x00420124                main
-                0x0042016c                vApplicationMallocFailedHook
-                0x00420189                vApplicationIdleHook
-                0x0042018f                vApplicationStackOverflowHook
-                0x004201ac                vApplicationTickHook
-                0x004201b2                vApplicationDaemonTaskStartupHook
-                0x004201b8                vAssertCalled
-                0x00420672                vApplicationGetIdleTaskMemory
-                0x00420693                vApplicationGetTimerTaskMemory
- .text          0x004206b4      0x20c main_blinky.o
-                0x004206b4                main_blinky
- .text          0x004208c0     0x1068 main_full.o
-                0x004208c0                main_full
-                0x00420e2c                vFullDemoIdleFunction
-                0x00420f5d                vFullDemoTickHookFunction
- .text          0x00421928        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00146.o)
-                0x00421928                timeGetDevCaps@8
- .text          0x00421930        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00145.o)
-                0x00421930                timeEndPeriod@4
- .text          0x00421938        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00144.o)
-                0x00421938                timeBeginPeriod@4
- .text          0x00421940        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqch.o)
- .text          0x00421940        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqct.o)
- .text          0x00421940        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRTglob.o)
- .text          0x00421940      0x3a0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(setargv.o)
-                0x00421940                _setargv
- .text          0x00421ce0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRTfmode.o)
- .text          0x00421ce0      0x110 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(cpu_features.o)
-                0x00421ce0                __cpu_features_init
- .text          0x00421df0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRT_fp10.o)
- .text          0x00421df0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(txtmode.o)
- .text          0x00421df0       0xa0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(gccmain.o)
-                0x00421df0                __do_global_dtors
-                0x00421e20                __do_global_ctors
-                0x00421e70                __main
- .text          0x00421e90       0xf0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(tlssup.o)
-                0x00421ee0                __dyn_tls_init@12
-                0x00421f70                __tlregdtor
- .text          0x00421f80      0x230 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(tlsthrd.o)
-                0x00421fe0                ___w64_mingwthr_add_key_dtor
-                0x00422070                ___w64_mingwthr_remove_key_dtor
-                0x00422110                __mingw_TLScallback
- .text          0x004221b0      0x310 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(pseudo-reloc.o)
-                0x004222f0                _pei386_runtime_relocator
- .text          0x004224c0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(pseudo-reloc-list.o)
- .text          0x004224c0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(crtst.o)
- .text          0x004224c0       0x2c c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
-                0x004224c0                __chkstk_ms
- .text          0x004224ec        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
- *fill*         0x004224ec        0x4 
- .text          0x004224f0      0x140 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
-                0x004224f0                __divdi3
- .text          0x00422630       0x70 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(fesetenv.o)
-                0x00422630                fesetenv
- .text          0x004226a0     0x1080 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(glob.o)
-                0x004235d0                __mingw_glob
-                0x004236c0                __mingw_globfree
- .text          0x00423720      0x400 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(dirname.o)
-                0x00423720                __mingw_dirname
- .text          0x00423b20      0x4f0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(dirent.o)
-                0x00423ca0                __mingw_opendir
-                0x00423e60                __mingw_readdir
-                0x00423eb0                __mingw_closedir
-                0x00423f00                __mingw_rewinddir
-                0x00423f60                __mingw_telldir
-                0x00423f90                __mingw_seekdir
- .text          0x00424010        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01325.o)
-                0x00424010                wcstombs
- .text          0x00424018        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01284.o)
-                0x00424018                vfprintf
- .text          0x00424020        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01277.o)
-                0x00424020                tolower
- .text          0x00424028        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01272.o)
-                0x00424028                time
- .text          0x00424030        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01252.o)
-                0x00424030                strncmp
- .text          0x00424038        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01249.o)
-                0x00424038                strlen
- .text          0x00424040        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01242.o)
-                0x00424040                strcoll
- .text          0x00424048        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01241.o)
-                0x00424048                strcmp
- .text          0x00424050        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01235.o)
-                0x00424050                srand
- .text          0x00424058        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01232.o)
-                0x00424058                sprintf
- .text          0x00424060        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01229.o)
-                0x00424060                signal
- .text          0x00424068        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01227.o)
-                0x00424068                setlocale
- .text          0x00424070        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01220.o)
-                0x00424070                realloc
- .text          0x00424078        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01218.o)
-                0x00424078                rand
- .text          0x00424080        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01212.o)
-                0x00424080                puts
- .text          0x00424088        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01211.o)
-                0x00424088                putchar
- .text          0x00424090        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01208.o)
-                0x00424090                printf
- .text          0x00424098        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01203.o)
-                0x00424098                memset
- .text          0x004240a0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01199.o)
-                0x004240a0                memcpy
- .text          0x004240a8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01198.o)
-                0x004240a8                memcmp
- .text          0x004240b0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01194.o)
-                0x004240b0                mbstowcs
- .text          0x004240b8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01187.o)
-                0x004240b8                malloc
- .text          0x004240c0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01142.o)
-                0x004240c0                fwrite
- .text          0x004240c8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01131.o)
-                0x004240c8                free
- .text          0x004240d0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01122.o)
-                0x004240d0                fopen
- .text          0x004240d8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01114.o)
-                0x004240d8                fflush
- .text          0x004240e0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01111.o)
-                0x004240e0                fclose
- .text          0x004240e8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01108.o)
-                0x004240e8                exit
- .text          0x004240f0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01098.o)
-                0x004240f0                calloc
- .text          0x004240f8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01091.o)
- .text          0x004240f8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01083.o)
-                0x004240f8                abort
- .text          0x00424100        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00753.o)
-                0x00424100                _setmode
- .text          0x00424108        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00698.o)
- .text          0x00424108        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00689.o)
- .text          0x00424108        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00422.o)
-                0x00424108                _isctype
- .text          0x00424110        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00417.o)
- .text          0x00424110        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00350.o)
-                0x00424110                _fullpath
- .text          0x00424118        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00285.o)
-                0x00424118                _errno
- .text          0x00424120        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00219.o)
-                0x00424120                _cexit
- .text          0x00424128        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00133.o)
-                0x00424128                __p__fmode
- .text          0x00424130        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00131.o)
-                0x00424130                __p__environ
- .text          0x00424138        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00119.o)
- .text          0x00424138        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00088.o)
-                0x00424138                __getmainargs
- .text          0x00424140        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbh.o)
- .text          0x00424140        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbt.o)
- .text          0x00424140        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01223.o)
-                0x00424140                WaitForSingleObject@8
- .text          0x00424148        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01221.o)
-                0x00424148                WaitForMultipleObjects@16
- .text          0x00424150        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01215.o)
-                0x00424150                VirtualQuery@12
- .text          0x00424158        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01213.o)
-                0x00424158                VirtualProtect@16
- .text          0x00424160        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01173.o)
-                0x00424160                TlsGetValue@4
- .text          0x00424168        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01167.o)
-                0x00424168                TerminateThread@8
- .text          0x00424170        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01160.o)
-                0x00424170                SuspendThread@4
- .text          0x00424178        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01152.o)
-                0x00424178                Sleep@4
- .text          0x00424180        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01140.o)
-                0x00424180                SetUnhandledExceptionFilter@4
- .text          0x00424188        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01130.o)
-                0x00424188                SetThreadPriorityBoost@8
- .text          0x00424190        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01129.o)
-                0x00424190                SetThreadPriority@8
- .text          0x00424198        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01120.o)
-                0x00424198                SetThreadAffinityMask@8
- .text          0x004241a0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01101.o)
-                0x004241a0                SetPriorityClass@8
- .text          0x004241a8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01065.o)
-                0x004241a8                SetEvent@4
- .text          0x004241b0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01021.o)
-                0x004241b0                SetConsoleCtrlHandler@8
- .text          0x004241b8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00999.o)
-                0x004241b8                ResumeThread@4
- .text          0x004241c0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00995.o)
-                0x004241c0                ResetEvent@4
- .text          0x004241c8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00974.o)
-                0x004241c8                ReleaseMutex@4
- .text          0x004241d0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00923.o)
-                0x004241d0                QueryPerformanceFrequency@4
- .text          0x004241d8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00922.o)
-                0x004241d8                QueryPerformanceCounter@4
- .text          0x004241e0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00817.o)
-                0x004241e0                LoadLibraryA@4
- .text          0x004241e8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00814.o)
-                0x004241e8                LeaveCriticalSection@4
- .text          0x004241f0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00734.o)
-                0x004241f0                InitializeCriticalSection@4
- .text          0x004241f8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00642.o)
-                0x004241f8                GetThreadContext@8
- .text          0x00424200        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00623.o)
-                0x00424200                GetSystemInfo@4
- .text          0x00424208        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00577.o)
-                0x00424208                GetProcAddress@8
- .text          0x00424210        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00529.o)
-                0x00424210                GetModuleHandleA@4
- .text          0x00424218        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00510.o)
-                0x00424218                GetLastError@0
- .text          0x00424220        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00450.o)
-                0x00424220                GetCurrentThread@0
- .text          0x00424228        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00446.o)
-                0x00424228                GetCurrentProcess@0
- .text          0x00424230        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00388.o)
-                0x00424230                GetCommandLineA@0
- .text          0x00424238        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00352.o)
-                0x00424238                FreeLibrary@4
- .text          0x00424240        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00321.o)
-                0x00424240                FindNextFileA@8
- .text          0x00424248        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00304.o)
-                0x00424248                FindFirstFileA@8
- .text          0x00424250        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00300.o)
-                0x00424250                FindClose@4
- .text          0x00424258        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00280.o)
-                0x00424258                ExitThread@4
- .text          0x00424260        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00279.o)
-                0x00424260                ExitProcess@4
- .text          0x00424268        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00236.o)
-                0x00424268                EnterCriticalSection@4
- .text          0x00424270        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00207.o)
-                0x00424270                DeleteCriticalSection@4
- .text          0x00424278        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00179.o)
-                0x00424278                CreateThread@24
- .text          0x00424280        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00154.o)
-                0x00424280                CreateMutexA@12
- .text          0x00424288        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00129.o)
-                0x00424288                CreateEventA@16
- .text          0x00424290        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00082.o)
-                0x00424290                CloseHandle@4
- .text          0x00424298        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujch.o)
- .text          0x00424298        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujct.o)
- .text          0x00424298        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbs00082.o)
-                0x00424298                stricoll
- .text          0x004242a0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbs00080.o)
-                0x004242a0                strdup
- .text          0x004242a8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbh.o)
- .text          0x004242a8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbt.o)
- .text          0x004242a8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+                0x00410a07                runTempPresHeight
+ .text          0x00410b54      0xbcc Standard_Demo_Tasks\AbortDelay.o
+                0x00410b54                vCreateAbortDelayTasks
+                0x004116bc                xAreAbortDelayTestTasksStillRunning
+ .text          0x00411720      0x41c Standard_Demo_Tasks\BlockQ.o
+                0x00411720                vStartBlockingQueueTasks
+                0x00411aa5                xAreBlockingQueuesStillRunning
+ .text          0x00411b3c      0xf20 Standard_Demo_Tasks\EventGroupsDemo.o
+                0x00411b3c                vStartEventGroupTasks
+                0x004128b8                vPeriodicEventGroupsProcessing
+                0x004129ea                xAreEventGroupTasksStillRunning
+ .text          0x00412a5c      0xea8 Standard_Demo_Tasks\GenQTest.o
+                0x00412a5c                vStartGenericQueueTasks
+                0x004138ac                xAreGenericQueueTasksStillRunning
+ .text          0x00413904      0x830 Standard_Demo_Tasks\IntSemTest.o
+                0x00413904                vStartInterruptSemaphoreTasks
+                0x00414019                vInterruptSemaphorePeriodicTest
+                0x004140d2                xAreInterruptSemaphoreTasksStillRunning
+ .text          0x00414134      0x354 Standard_Demo_Tasks\MessageBufferAMP.o
+                0x00414134                vStartMessageBufferAMPTasks
+                0x0041439f                vGenerateCoreBInterrupt
+                0x0041442e                xAreMessageBufferAMPTasksStillRunning
+ .text          0x00414488     0x1440 Standard_Demo_Tasks\MessageBufferDemo.o
+                0x00414488                vStartMessageBufferTasks
+                0x00415804                xAreMessageBufferTasksStillRunning
+ .text          0x004158c8      0x218 Standard_Demo_Tasks\PollQ.o
+                0x004158c8                vStartPolledQueueTasks
+                0x00415a9c                xArePollingQueuesStillRunning
+ .text          0x00415ae0      0x570 Standard_Demo_Tasks\QPeek.o
+                0x00415ae0                vStartQueuePeekTasks
+                0x0041601b                xAreQueuePeekTasksStillRunning
+ .text          0x00416050      0x334 Standard_Demo_Tasks\QueueOverwrite.o
+                0x00416050                vStartQueueOverwriteTask
+                0x00416222                xIsQueueOverwriteTaskStillRunning
+                0x00416263                vQueueOverwritePeriodicISRDemo
+ .text          0x00416384     0x1244 Standard_Demo_Tasks\QueueSet.o
+                0x00416384                vStartQueueSetTasks
+                0x0041640c                xAreQueueSetTasksStillRunning
+                0x004166f2                vQueueSetAccessQueueSetFromISR
+ .text          0x004175c8      0x1ac Standard_Demo_Tasks\QueueSetPolling.o
+                0x004175c8                vStartQueueSetPollingTask
+                0x004176e5                vQueueSetPollingInterruptAccess
+                0x00417746                xAreQueueSetPollTasksStillRunning
+ .text          0x00417774      0xeec Standard_Demo_Tasks\StaticAllocation.o
+                0x00417774                vStartStaticallyAllocatedTasks
+                0x00418614                xAreStaticAllocationTasksStillRunning
+ .text          0x00418660     0x1fdc Standard_Demo_Tasks\StreamBufferDemo.o
+                0x00418660                vStartStreamBufferTasks
+                0x0041a2e5                vPeriodicStreamBufferProcessing
+                0x0041a54c                xAreStreamBufferTasksStillRunning
+ .text          0x0041a63c      0x274 Standard_Demo_Tasks\StreamBufferInterrupt.o
+                0x0041a63c                vStartStreamBufferInterruptDemo
+                0x0041a7e5                vBasicStreamBufferSendFromISR
+                0x0041a87c                xIsInterruptStreamBufferDemoStillRunning
+ .text          0x0041a8b0     0x1328 Standard_Demo_Tasks\TaskNotify.o
+                0x0041a8b0                vStartTaskNotifyTask
+                0x0041b9db                xNotifyTaskFromISR
+                0x0041bb3a                xAreTaskNotificationTasksStillRunning
+ .text          0x0041bbd8     0x1860 Standard_Demo_Tasks\TimerDemo.o
+                0x0041bbd8                vStartTimerDemoTask
+                0x0041bd67                xAreTimerDemoTasksStillRunning
+                0x0041ca1c                vTimerPeriodicISRTests
+ .text          0x0041d438      0x86c Standard_Demo_Tasks\blocktim.o
+                0x0041d438                vCreateBlockTimeTasks
+                0x0041dc3f                xAreBlockTimeTestTasksStillRunning
+ .text          0x0041dca4      0x3c0 Standard_Demo_Tasks\countsem.o
+                0x0041dca4                vStartCountingSemaphoreTasks
+                0x0041dffb                xAreCountingSemaphoreTasksStillRunning
+ .text          0x0041e064      0x1f0 Standard_Demo_Tasks\death.o
+                0x0041e064                vCreateSuicidalTasks
+                0x0041e1d5                xIsCreateTaskStillRunning
+ .text          0x0041e254      0x50c Standard_Demo_Tasks\dynamic.o
+                0x0041e254                vStartDynamicPriorityTasks
+                0x0041e6e5                xAreDynamicPriorityTasksStillRunning
+ .text          0x0041e760      0x468 Standard_Demo_Tasks\flop.o
+                0x0041e760                vStartMathTasks
+                0x0041eb7b                xAreMathsTaskStillRunning
+ .text          0x0041ebc8      0x130 Standard_Demo_Tasks\integer.o
+                0x0041ebc8                vStartIntegerMathTasks
+                0x0041eca6                xAreIntegerMathsTaskStillRunning
+ .text          0x0041ecf8      0x3d8 Standard_Demo_Tasks\semtest.o
+                0x0041ecf8                vStartSemaphoreTasks
+                0x0041f073                xAreSemaphoreTasksStillRunning
+ .text          0x0041f0d0      0x150 TestTasks.o
+                0x0041f0d0                myTask1
+                0x0041f13b                myTask2
+                0x0041f1a6                main_TestTasks
+ .text          0x0041f220      0x1dc api.o
+                0x0041f220                getTemperature
+                0x0041f26d                getPressure
+                0x0041f2b3                getHeight
+                0x0041f2f5                getAngle
+                0x0041f33c                gcdTwo
+                0x0041f367                gcdThree
+                0x0041f3ad                lcm
+                0x0041f3d3                getMinimum
+ .text          0x0041f3fc      0xb34 code_coverage_additions.o
+                0x0041fee6                xRunCodeCoverageTestAdditions
+ .text          0x0041ff30      0x1b0 linkedlist.o
+                0x0041ff30                insertAtTheBegin
+                0x0041ff6c                printList
+                0x0041ffbc                bubbleSortLinkedList
+                0x00420036                swap
+                0x00420077                gcdLinkedList
+ .text          0x004200e0      0x590 main.o
+                0x004200e0                main
+                0x00420128                vApplicationMallocFailedHook
+                0x00420145                vApplicationIdleHook
+                0x0042014b                vApplicationStackOverflowHook
+                0x00420168                vApplicationTickHook
+                0x0042016e                vApplicationDaemonTaskStartupHook
+                0x00420174                vAssertCalled
+                0x0042062e                vApplicationGetIdleTaskMemory
+                0x0042064f                vApplicationGetTimerTaskMemory
+ .text          0x00420670      0x20c main_blinky.o
+                0x00420670                main_blinky
+ .text          0x0042087c     0x1068 main_full.o
+                0x0042087c                main_full
+                0x00420de8                vFullDemoIdleFunction
+                0x00420f19                vFullDemoTickHookFunction
+ .text          0x004218e4        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00146.o)
+                0x004218e4                timeGetDevCaps@8
+ .text          0x004218ec        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00145.o)
+                0x004218ec                timeEndPeriod@4
+ .text          0x004218f4        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqcs00144.o)
+                0x004218f4                timeBeginPeriod@4
+ .text          0x004218fc        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqch.o)
+ .text          0x004218fc        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libwinmm.a(drqct.o)
+ .text          0x004218fc        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRTglob.o)
+ *fill*         0x004218fc        0x4 
+ .text          0x00421900      0x3a0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(setargv.o)
+                0x00421900                _setargv
+ .text          0x00421ca0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRTfmode.o)
+ .text          0x00421ca0      0x110 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(cpu_features.o)
+                0x00421ca0                __cpu_features_init
+ .text          0x00421db0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(CRT_fp10.o)
+ .text          0x00421db0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(txtmode.o)
+ .text          0x00421db0       0xa0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(gccmain.o)
+                0x00421db0                __do_global_dtors
+                0x00421de0                __do_global_ctors
+                0x00421e30                __main
+ .text          0x00421e50       0xf0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(tlssup.o)
+                0x00421ea0                __dyn_tls_init@12
+                0x00421f30                __tlregdtor
+ .text          0x00421f40      0x230 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(tlsthrd.o)
+                0x00421fa0                ___w64_mingwthr_add_key_dtor
+                0x00422030                ___w64_mingwthr_remove_key_dtor
+                0x004220d0                __mingw_TLScallback
+ .text          0x00422170      0x310 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(pseudo-reloc.o)
+                0x004222b0                _pei386_runtime_relocator
+ .text          0x00422480        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(pseudo-reloc-list.o)
+ .text          0x00422480        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(crtst.o)
+ .text          0x00422480       0x2c c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
+                0x00422480                __chkstk_ms
+ .text          0x004224ac        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
+ *fill*         0x004224ac        0x4 
+ .text          0x004224b0      0x140 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
+                0x004224b0                __divdi3
+ .text          0x004225f0       0x70 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(fesetenv.o)
+                0x004225f0                fesetenv
+ .text          0x00422660     0x1080 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(glob.o)
+                0x00423590                __mingw_glob
+                0x00423680                __mingw_globfree
+ .text          0x004236e0      0x400 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(dirname.o)
+                0x004236e0                __mingw_dirname
+ .text          0x00423ae0      0x4f0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingwex.a(dirent.o)
+                0x00423c60                __mingw_opendir
+                0x00423e20                __mingw_readdir
+                0x00423e70                __mingw_closedir
+                0x00423ec0                __mingw_rewinddir
+                0x00423f20                __mingw_telldir
+                0x00423f50                __mingw_seekdir
+ .text          0x00423fd0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01325.o)
+                0x00423fd0                wcstombs
+ .text          0x00423fd8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01284.o)
+                0x00423fd8                vfprintf
+ .text          0x00423fe0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01277.o)
+                0x00423fe0                tolower
+ .text          0x00423fe8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01272.o)
+                0x00423fe8                time
+ .text          0x00423ff0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01252.o)
+                0x00423ff0                strncmp
+ .text          0x00423ff8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01249.o)
+                0x00423ff8                strlen
+ .text          0x00424000        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01242.o)
+                0x00424000                strcoll
+ .text          0x00424008        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01241.o)
+                0x00424008                strcmp
+ .text          0x00424010        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01235.o)
+                0x00424010                srand
+ .text          0x00424018        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01232.o)
+                0x00424018                sprintf
+ .text          0x00424020        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01229.o)
+                0x00424020                signal
+ .text          0x00424028        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01227.o)
+                0x00424028                setlocale
+ .text          0x00424030        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01220.o)
+                0x00424030                realloc
+ .text          0x00424038        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01218.o)
+                0x00424038                rand
+ .text          0x00424040        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01212.o)
+                0x00424040                puts
+ .text          0x00424048        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01211.o)
+                0x00424048                putchar
+ .text          0x00424050        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01208.o)
+                0x00424050                printf
+ .text          0x00424058        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01203.o)
+                0x00424058                memset
+ .text          0x00424060        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01199.o)
+                0x00424060                memcpy
+ .text          0x00424068        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01198.o)
+                0x00424068                memcmp
+ .text          0x00424070        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01194.o)
+                0x00424070                mbstowcs
+ .text          0x00424078        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01187.o)
+                0x00424078                malloc
+ .text          0x00424080        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01142.o)
+                0x00424080                fwrite
+ .text          0x00424088        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01131.o)
+                0x00424088                free
+ .text          0x00424090        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01122.o)
+                0x00424090                fopen
+ .text          0x00424098        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01114.o)
+                0x00424098                fflush
+ .text          0x004240a0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01111.o)
+                0x004240a0                fclose
+ .text          0x004240a8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01108.o)
+                0x004240a8                exit
+ .text          0x004240b0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01098.o)
+                0x004240b0                calloc
+ .text          0x004240b8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01091.o)
+ .text          0x004240b8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs01083.o)
+                0x004240b8                abort
+ .text          0x004240c0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00753.o)
+                0x004240c0                _setmode
+ .text          0x004240c8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00698.o)
+ .text          0x004240c8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00689.o)
+ .text          0x004240c8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00422.o)
+                0x004240c8                _isctype
+ .text          0x004240d0        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00417.o)
+ .text          0x004240d0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00350.o)
+                0x004240d0                _fullpath
+ .text          0x004240d8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00285.o)
+                0x004240d8                _errno
+ .text          0x004240e0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00219.o)
+                0x004240e0                _cexit
+ .text          0x004240e8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00133.o)
+                0x004240e8                __p__fmode
+ .text          0x004240f0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00131.o)
+                0x004240f0                __p__environ
+ .text          0x004240f8        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00119.o)
+ .text          0x004240f8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbs00088.o)
+                0x004240f8                __getmainargs
+ .text          0x00424100        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbh.o)
+ .text          0x00424100        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmsvcrt.a(djpvbt.o)
+ .text          0x00424100        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01223.o)
+                0x00424100                WaitForSingleObject@8
+ .text          0x00424108        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01221.o)
+                0x00424108                WaitForMultipleObjects@16
+ .text          0x00424110        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01215.o)
+                0x00424110                VirtualQuery@12
+ .text          0x00424118        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01213.o)
+                0x00424118                VirtualProtect@16
+ .text          0x00424120        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01173.o)
+                0x00424120                TlsGetValue@4
+ .text          0x00424128        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01167.o)
+                0x00424128                TerminateThread@8
+ .text          0x00424130        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01160.o)
+                0x00424130                SuspendThread@4
+ .text          0x00424138        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01152.o)
+                0x00424138                Sleep@4
+ .text          0x00424140        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01140.o)
+                0x00424140                SetUnhandledExceptionFilter@4
+ .text          0x00424148        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01130.o)
+                0x00424148                SetThreadPriorityBoost@8
+ .text          0x00424150        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01129.o)
+                0x00424150                SetThreadPriority@8
+ .text          0x00424158        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01120.o)
+                0x00424158                SetThreadAffinityMask@8
+ .text          0x00424160        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01101.o)
+                0x00424160                SetPriorityClass@8
+ .text          0x00424168        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01065.o)
+                0x00424168                SetEvent@4
+ .text          0x00424170        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs01021.o)
+                0x00424170                SetConsoleCtrlHandler@8
+ .text          0x00424178        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00999.o)
+                0x00424178                ResumeThread@4
+ .text          0x00424180        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00995.o)
+                0x00424180                ResetEvent@4
+ .text          0x00424188        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00974.o)
+                0x00424188                ReleaseMutex@4
+ .text          0x00424190        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00923.o)
+                0x00424190                QueryPerformanceFrequency@4
+ .text          0x00424198        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00922.o)
+                0x00424198                QueryPerformanceCounter@4
+ .text          0x004241a0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00817.o)
+                0x004241a0                LoadLibraryA@4
+ .text          0x004241a8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00814.o)
+                0x004241a8                LeaveCriticalSection@4
+ .text          0x004241b0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00734.o)
+                0x004241b0                InitializeCriticalSection@4
+ .text          0x004241b8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00642.o)
+                0x004241b8                GetThreadContext@8
+ .text          0x004241c0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00623.o)
+                0x004241c0                GetSystemInfo@4
+ .text          0x004241c8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00577.o)
+                0x004241c8                GetProcAddress@8
+ .text          0x004241d0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00529.o)
+                0x004241d0                GetModuleHandleA@4
+ .text          0x004241d8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00510.o)
+                0x004241d8                GetLastError@0
+ .text          0x004241e0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00450.o)
+                0x004241e0                GetCurrentThread@0
+ .text          0x004241e8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00446.o)
+                0x004241e8                GetCurrentProcess@0
+ .text          0x004241f0        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00388.o)
+                0x004241f0                GetCommandLineA@0
+ .text          0x004241f8        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00352.o)
+                0x004241f8                FreeLibrary@4
+ .text          0x00424200        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00321.o)
+                0x00424200                FindNextFileA@8
+ .text          0x00424208        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00304.o)
+                0x00424208                FindFirstFileA@8
+ .text          0x00424210        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00300.o)
+                0x00424210                FindClose@4
+ .text          0x00424218        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00280.o)
+                0x00424218                ExitThread@4
+ .text          0x00424220        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00279.o)
+                0x00424220                ExitProcess@4
+ .text          0x00424228        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00236.o)
+                0x00424228                EnterCriticalSection@4
+ .text          0x00424230        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00207.o)
+                0x00424230                DeleteCriticalSection@4
+ .text          0x00424238        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00179.o)
+                0x00424238                CreateThread@24
+ .text          0x00424240        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00154.o)
+                0x00424240                CreateMutexA@12
+ .text          0x00424248        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00129.o)
+                0x00424248                CreateEventA@16
+ .text          0x00424250        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujcs00082.o)
+                0x00424250                CloseHandle@4
+ .text          0x00424258        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujch.o)
+ .text          0x00424258        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libkernel32.a(dujct.o)
+ .text          0x00424258        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbs00082.o)
+                0x00424258                stricoll
+ .text          0x00424260        0x8 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbs00080.o)
+                0x00424260                strdup
+ .text          0x00424268        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbh.o)
+ .text          0x00424268        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmoldname.a(dagwbt.o)
+ .text          0x00424268        0x0 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
  *(SORT(.text$*))
  *(.text.*)
- *fill*         0x004242a8        0x8 
- .text.startup  0x004242b0       0x10 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+ *fill*         0x00424268        0x8 
+ .text.startup  0x00424270       0x10 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
  *(.gnu.linkonce.t.*)
  *(.glue_7t)
  *(.glue_7)
-                0x004242c0                ___CTOR_LIST__ = .
-                0x004242c0                __CTOR_LIST__ = .
-                0x004242c0        0x4 LONG 0xffffffff
+                0x00424280                ___CTOR_LIST__ = .
+                0x00424280                __CTOR_LIST__ = .
+                0x00424280        0x4 LONG 0xffffffff
  *(.ctors)
  *(.ctor)
  *(SORT(.ctors.*))
- .ctors.65535   0x004242c4        0x4 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
-                0x004242c8        0x4 LONG 0x0
-                0x004242cc                ___DTOR_LIST__ = .
-                0x004242cc                __DTOR_LIST__ = .
-                0x004242cc        0x4 LONG 0xffffffff
+ .ctors.65535   0x00424284        0x4 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+                0x00424288        0x4 LONG 0x0
+                0x0042428c                ___DTOR_LIST__ = .
+                0x0042428c                __DTOR_LIST__ = .
+                0x0042428c        0x4 LONG 0xffffffff
  *(.dtors)
  *(.dtor)
  *(SORT(.dtors.*))
-                0x004242d0        0x4 LONG 0x0
+                0x00424290        0x4 LONG 0x0
  *(.fini)
  *(.gcc_exc)
                 [!provide]                PROVIDE (etext, .)
@@ -2364,41 +2365,41 @@ LOAD c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
  .debug_info    0x0047a2c9     0x50f6 FreeRTOS_Source\tasks.o
  .debug_info    0x0047f3bf     0x3ca5 FreeRTOS_Source\timers.o
  .debug_info    0x00483064     0x2912 Run-time-stats-utils.o
- .debug_info    0x00485976     0x2b58 Run.o
- .debug_info    0x004884ce     0x33df Standard_Demo_Tasks\AbortDelay.o
- .debug_info    0x0048b8ad     0x2b45 Standard_Demo_Tasks\BlockQ.o
- .debug_info    0x0048e3f2     0x2d38 Standard_Demo_Tasks\EventGroupsDemo.o
- .debug_info    0x0049112a     0x2c5a Standard_Demo_Tasks\GenQTest.o
- .debug_info    0x00493d84     0x2bc8 Standard_Demo_Tasks\IntSemTest.o
- .debug_info    0x0049694c     0x2ad3 Standard_Demo_Tasks\MessageBufferAMP.o
- .debug_info    0x0049941f     0x31b8 Standard_Demo_Tasks\MessageBufferDemo.o
- .debug_info    0x0049c5d7     0x2963 Standard_Demo_Tasks\PollQ.o
- .debug_info    0x0049ef3a     0x2a26 Standard_Demo_Tasks\QPeek.o
- .debug_info    0x004a1960     0x29b9 Standard_Demo_Tasks\QueueOverwrite.o
- .debug_info    0x004a4319     0x3018 Standard_Demo_Tasks\QueueSet.o
- .debug_info    0x004a7331     0x295e Standard_Demo_Tasks\QueueSetPolling.o
- .debug_info    0x004a9c8f     0x371c Standard_Demo_Tasks\StaticAllocation.o
- .debug_info    0x004ad3ab     0x346e Standard_Demo_Tasks\StreamBufferDemo.o
- .debug_info    0x004b0819     0x29cd Standard_Demo_Tasks\StreamBufferInterrupt.o
- .debug_info    0x004b31e6     0x2dae Standard_Demo_Tasks\TaskNotify.o
- .debug_info    0x004b5f94     0x2ec3 Standard_Demo_Tasks\TimerDemo.o
- .debug_info    0x004b8e57     0x2b14 Standard_Demo_Tasks\blocktim.o
- .debug_info    0x004bb96b     0x2a11 Standard_Demo_Tasks\countsem.o
- .debug_info    0x004be37c     0x298b Standard_Demo_Tasks\death.o
- .debug_info    0x004c0d07     0x2ba7 Standard_Demo_Tasks\dynamic.o
- .debug_info    0x004c38ae     0x2aac Standard_Demo_Tasks\flop.o
- .debug_info    0x004c635a     0x28c2 Standard_Demo_Tasks\integer.o
- .debug_info    0x004c8c1c     0x2a67 Standard_Demo_Tasks\semtest.o
- .debug_info    0x004cb683     0x283e TestTasks.o
- .debug_info    0x004cdec1      0x4e3 api.o
- .debug_info    0x004ce3a4     0x2df2 code_coverage_additions.o
- .debug_info    0x004d1196     0x2a5b linkedlist.o
- .debug_info    0x004d3bf1     0x309b main.o
- .debug_info    0x004d6c8c     0x28f6 main_blinky.o
- .debug_info    0x004d9582     0x3115 main_full.o
- .debug_info    0x004dc697       0xa7 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
- .debug_info    0x004dc73e     0x1c58 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
- .debug_info    0x004de396     0x13f3 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
+ .debug_info    0x00485976     0x2b3c Run.o
+ .debug_info    0x004884b2     0x33df Standard_Demo_Tasks\AbortDelay.o
+ .debug_info    0x0048b891     0x2b45 Standard_Demo_Tasks\BlockQ.o
+ .debug_info    0x0048e3d6     0x2d38 Standard_Demo_Tasks\EventGroupsDemo.o
+ .debug_info    0x0049110e     0x2c5a Standard_Demo_Tasks\GenQTest.o
+ .debug_info    0x00493d68     0x2bc8 Standard_Demo_Tasks\IntSemTest.o
+ .debug_info    0x00496930     0x2ad3 Standard_Demo_Tasks\MessageBufferAMP.o
+ .debug_info    0x00499403     0x31b8 Standard_Demo_Tasks\MessageBufferDemo.o
+ .debug_info    0x0049c5bb     0x2963 Standard_Demo_Tasks\PollQ.o
+ .debug_info    0x0049ef1e     0x2a26 Standard_Demo_Tasks\QPeek.o
+ .debug_info    0x004a1944     0x29b9 Standard_Demo_Tasks\QueueOverwrite.o
+ .debug_info    0x004a42fd     0x3018 Standard_Demo_Tasks\QueueSet.o
+ .debug_info    0x004a7315     0x295e Standard_Demo_Tasks\QueueSetPolling.o
+ .debug_info    0x004a9c73     0x371c Standard_Demo_Tasks\StaticAllocation.o
+ .debug_info    0x004ad38f     0x346e Standard_Demo_Tasks\StreamBufferDemo.o
+ .debug_info    0x004b07fd     0x29cd Standard_Demo_Tasks\StreamBufferInterrupt.o
+ .debug_info    0x004b31ca     0x2dae Standard_Demo_Tasks\TaskNotify.o
+ .debug_info    0x004b5f78     0x2ec3 Standard_Demo_Tasks\TimerDemo.o
+ .debug_info    0x004b8e3b     0x2b14 Standard_Demo_Tasks\blocktim.o
+ .debug_info    0x004bb94f     0x2a11 Standard_Demo_Tasks\countsem.o
+ .debug_info    0x004be360     0x298b Standard_Demo_Tasks\death.o
+ .debug_info    0x004c0ceb     0x2ba7 Standard_Demo_Tasks\dynamic.o
+ .debug_info    0x004c3892     0x2aac Standard_Demo_Tasks\flop.o
+ .debug_info    0x004c633e     0x28c2 Standard_Demo_Tasks\integer.o
+ .debug_info    0x004c8c00     0x2a67 Standard_Demo_Tasks\semtest.o
+ .debug_info    0x004cb667     0x283e TestTasks.o
+ .debug_info    0x004cdea5      0x4e3 api.o
+ .debug_info    0x004ce388     0x2df2 code_coverage_additions.o
+ .debug_info    0x004d117a     0x2a5b linkedlist.o
+ .debug_info    0x004d3bd5     0x309b main.o
+ .debug_info    0x004d6c70     0x28f6 main_blinky.o
+ .debug_info    0x004d9566     0x3115 main_full.o
+ .debug_info    0x004dc67b       0xa7 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
+ .debug_info    0x004dc722     0x1c58 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
+ .debug_info    0x004de37a     0x13f3 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
 
 .zdebug_info
  *(.zdebug_info .zdebug.gnu.linkonce.wi.*)
@@ -2474,41 +2475,41 @@ LOAD c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
  .debug_line    0x004ede2d     0x13b9 FreeRTOS_Source\tasks.o
  .debug_line    0x004ef1e6      0xaa6 FreeRTOS_Source\timers.o
  .debug_line    0x004efc8c      0x72a Run-time-stats-utils.o
- .debug_line    0x004f03b6      0x81f Run.o
- .debug_line    0x004f0bd5      0x954 Standard_Demo_Tasks\AbortDelay.o
- .debug_line    0x004f1529      0x818 Standard_Demo_Tasks\BlockQ.o
- .debug_line    0x004f1d41      0x9c0 Standard_Demo_Tasks\EventGroupsDemo.o
- .debug_line    0x004f2701      0x9b0 Standard_Demo_Tasks\GenQTest.o
- .debug_line    0x004f30b1      0x8de Standard_Demo_Tasks\IntSemTest.o
- .debug_line    0x004f398f      0x86d Standard_Demo_Tasks\MessageBufferAMP.o
- .debug_line    0x004f41fc      0xb6b Standard_Demo_Tasks\MessageBufferDemo.o
- .debug_line    0x004f4d67      0x7f6 Standard_Demo_Tasks\PollQ.o
- .debug_line    0x004f555d      0x83c Standard_Demo_Tasks\QPeek.o
- .debug_line    0x004f5d99      0x822 Standard_Demo_Tasks\QueueOverwrite.o
- .debug_line    0x004f65bb      0xa03 Standard_Demo_Tasks\QueueSet.o
- .debug_line    0x004f6fbe      0x7f0 Standard_Demo_Tasks\QueueSetPolling.o
- .debug_line    0x004f77ae      0xa87 Standard_Demo_Tasks\StaticAllocation.o
- .debug_line    0x004f8235      0xc72 Standard_Demo_Tasks\StreamBufferDemo.o
- .debug_line    0x004f8ea7      0x81c Standard_Demo_Tasks\StreamBufferInterrupt.o
- .debug_line    0x004f96c3      0xac8 Standard_Demo_Tasks\TaskNotify.o
- .debug_line    0x004fa18b      0xc76 Standard_Demo_Tasks\TimerDemo.o
- .debug_line    0x004fae01      0x8ec Standard_Demo_Tasks\blocktim.o
- .debug_line    0x004fb6ed      0x850 Standard_Demo_Tasks\countsem.o
- .debug_line    0x004fbf3d      0x7df Standard_Demo_Tasks\death.o
- .debug_line    0x004fc71c      0x87a Standard_Demo_Tasks\dynamic.o
- .debug_line    0x004fcf96      0x872 Standard_Demo_Tasks\flop.o
- .debug_line    0x004fd808      0x7da Standard_Demo_Tasks\integer.o
- .debug_line    0x004fdfe2      0x829 Standard_Demo_Tasks\semtest.o
- .debug_line    0x004fe80b      0x76d TestTasks.o
- .debug_line    0x004fef78      0x1b7 api.o
- .debug_line    0x004ff12f      0x8b0 code_coverage_additions.o
- .debug_line    0x004ff9df      0x77a linkedlist.o
- .debug_line    0x00500159      0x85e main.o
- .debug_line    0x005009b7      0x791 main_blinky.o
- .debug_line    0x00501148      0xb91 main_full.o
- .debug_line    0x00501cd9       0x71 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
- .debug_line    0x00501d4a      0x157 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
- .debug_line    0x00501ea1      0x1ac c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
+ .debug_line    0x004f03b6      0x817 Run.o
+ .debug_line    0x004f0bcd      0x954 Standard_Demo_Tasks\AbortDelay.o
+ .debug_line    0x004f1521      0x818 Standard_Demo_Tasks\BlockQ.o
+ .debug_line    0x004f1d39      0x9c0 Standard_Demo_Tasks\EventGroupsDemo.o
+ .debug_line    0x004f26f9      0x9b0 Standard_Demo_Tasks\GenQTest.o
+ .debug_line    0x004f30a9      0x8de Standard_Demo_Tasks\IntSemTest.o
+ .debug_line    0x004f3987      0x86d Standard_Demo_Tasks\MessageBufferAMP.o
+ .debug_line    0x004f41f4      0xb6b Standard_Demo_Tasks\MessageBufferDemo.o
+ .debug_line    0x004f4d5f      0x7f6 Standard_Demo_Tasks\PollQ.o
+ .debug_line    0x004f5555      0x83c Standard_Demo_Tasks\QPeek.o
+ .debug_line    0x004f5d91      0x822 Standard_Demo_Tasks\QueueOverwrite.o
+ .debug_line    0x004f65b3      0xa03 Standard_Demo_Tasks\QueueSet.o
+ .debug_line    0x004f6fb6      0x7f0 Standard_Demo_Tasks\QueueSetPolling.o
+ .debug_line    0x004f77a6      0xa87 Standard_Demo_Tasks\StaticAllocation.o
+ .debug_line    0x004f822d      0xc72 Standard_Demo_Tasks\StreamBufferDemo.o
+ .debug_line    0x004f8e9f      0x81c Standard_Demo_Tasks\StreamBufferInterrupt.o
+ .debug_line    0x004f96bb      0xac8 Standard_Demo_Tasks\TaskNotify.o
+ .debug_line    0x004fa183      0xc76 Standard_Demo_Tasks\TimerDemo.o
+ .debug_line    0x004fadf9      0x8ec Standard_Demo_Tasks\blocktim.o
+ .debug_line    0x004fb6e5      0x850 Standard_Demo_Tasks\countsem.o
+ .debug_line    0x004fbf35      0x7df Standard_Demo_Tasks\death.o
+ .debug_line    0x004fc714      0x87a Standard_Demo_Tasks\dynamic.o
+ .debug_line    0x004fcf8e      0x872 Standard_Demo_Tasks\flop.o
+ .debug_line    0x004fd800      0x7da Standard_Demo_Tasks\integer.o
+ .debug_line    0x004fdfda      0x829 Standard_Demo_Tasks\semtest.o
+ .debug_line    0x004fe803      0x76d TestTasks.o
+ .debug_line    0x004fef70      0x1b7 api.o
+ .debug_line    0x004ff127      0x8b0 code_coverage_additions.o
+ .debug_line    0x004ff9d7      0x77a linkedlist.o
+ .debug_line    0x00500151      0x85e main.o
+ .debug_line    0x005009af      0x791 main_blinky.o
+ .debug_line    0x00501140      0xb91 main_full.o
+ .debug_line    0x00501cd1       0x71 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_chkstk_ms.o)
+ .debug_line    0x00501d42      0x157 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_ctors.o)
+ .debug_line    0x00501e99      0x1ac c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgcc.a(_divdi3.o)
 
 .zdebug_line
  *(.zdebug_line)
