@@ -82,7 +82,7 @@ void printPriorityDeadlines()
 	printf("Task:\t\tPriority\tDeadline\n");
 	printf("Temperature:\t%lu\t\t%ld\n", uxTaskPriorityGet(temperatureHandl), deadlineTEMPERATURE);
 	printf("Pressure:\t%lu\t\t%ld\n", uxTaskPriorityGet(pressureHandl), deadlinePRESSURE);
-	printf("Height:\t\t%lu\t\t%ld\n", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
+	printf("Height:\t\t%lu\t\t%ld\n\r", uxTaskPriorityGet(heightHandl), deadlineHEIGHT);
 	//printf("Angle:\t\t%lu\t\t%ld\n\r", uxTaskPriorityGet(angleHandl), deadlineANGLE);
 }
 
