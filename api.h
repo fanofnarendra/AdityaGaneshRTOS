@@ -20,10 +20,8 @@ int getHeight();
 
 //int getAngle();
 
-int lcm(int, int);
 
-long int gcd(long int, long int);
 
-int gcdThree(int, int, int);
+long int gcdTwo(long int, long int);
 
-int getMinimum(int, int, int);
+

@@ -31,21 +31,3 @@ long int gcdTwo(long int a, long int b)
   return gcdTwo(b, a % b);
 }
 
-int gcdThree(int a, int b, int c)
-{
-  if (b == 0)
-    return a;
-  int d = gcdTwo(b, a % b);
-  return gcdTwo(c, d % c);
-}
-
-int lcm(int a, int b)
-{
-    return (a / gcdTwo(a, b)) * b;
-}
-
-int getMinimum(int x, int y, int z)
-{
-	return (x<y)? ((x<z)?x:z):((y<z)?y:z);
-}
-
