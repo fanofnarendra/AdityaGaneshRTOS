@@ -137,8 +137,7 @@ void runTempPresHeight( void )
 	//EDF Task: priority is highest
 	xTaskCreate(vScheduleEDF, "edfTask", 1000, head, configMAX_PRIORITIES-1, &edfHandl);
 
-	printf("Hi Ganesh");
-	printf("Hi Aditya\n");
+
 
 	vTaskStartScheduler();
 	while(1);
