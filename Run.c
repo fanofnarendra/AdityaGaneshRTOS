@@ -7,7 +7,7 @@
 TaskHandle_t temperatureHandl = NULL;
 TaskHandle_t pressureHandl = NULL;
 TaskHandle_t heightHandl = NULL;
-TaskHandle_t angleHandl = NULL;
+//TaskHandle_t angleHandl = NULL;
 
 TaskHandle_t edfHandl = NULL;
 
@@ -60,7 +60,7 @@ void getHeightTask(void *p)
 		vTaskDelay(periodHEIGHT/portTICK_PERIOD_MS);
 	}
 }
-
+/*
 //task which reads Angle periodically
 void getAngleTask(void *p)
 {
@@ -76,105 +76,7 @@ void getAngleTask(void *p)
 		vTaskDelay(periodANGLE/portTICK_PERIOD_MS);
 	}
 }
-
-//sort task according to deadlines and store
-/*
-void sortTasks()
-{
-	if(deadlineTEMPERATURE == deadlinePRESSURE)
-	{
-		if(deadlineTEMPERATURE < deadlineHEIGHT)
-		{
-			sortedTaskHandles[0] = &temperatureHandl;
-			sortedTaskHandles[1] = &pressureHandl;
-			sortedTaskHandles[2] = &heightHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &heightHandl;
-			sortedTaskHandles[1] = &temperatureHandl;
-			sortedTaskHandles[2] = &pressureHandl;
-		}
-	}
-	else if(deadlinePRESSURE == deadlineHEIGHT)
-	{
-		if(deadlinePRESSURE < deadlineTEMPERATURE)
-		{
-			sortedTaskHandles[0] = &pressureHandl;
-			sortedTaskHandles[1] = &heightHandl;
-			sortedTaskHandles[2] = &temperatureHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &temperatureHandl;
-			sortedTaskHandles[1] = &pressureHandl;
-			sortedTaskHandles[2] = &heightHandl;
-		}
-	}
-	else if(deadlineTEMPERATURE == deadlineHEIGHT)
-	{
-		if(deadlineTEMPERATURE < deadlinePRESSURE)
-		{
-			sortedTaskHandles[0] = &temperatureHandl;
-			sortedTaskHandles[1] = &heightHandl;
-			sortedTaskHandles[2] = &pressureHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &pressureHandl;
-			sortedTaskHandles[1] = &temperatureHandl;
-			sortedTaskHandles[2] = &heightHandl;
-		}
-	}
-	else if(deadlineTEMPERATURE < deadlinePRESSURE && deadlineTEMPERATURE < deadlineHEIGHT)
-	{
-		if(deadlinePRESSURE < deadlineHEIGHT)
-		{
-			sortedTaskHandles[0] = &temperatureHandl;
-			sortedTaskHandles[1] = &pressureHandl;
-			sortedTaskHandles[2] = &heightHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &temperatureHandl;
-			sortedTaskHandles[1] = &heightHandl;
-			sortedTaskHandles[2] = &pressureHandl;
-		}
-	}
-	else if(deadlinePRESSURE < deadlineTEMPERATURE && deadlinePRESSURE < deadlineHEIGHT)
-	{
-		if(deadlineTEMPERATURE < deadlineHEIGHT)
-		{
-			sortedTaskHandles[0] = &pressureHandl;
-			sortedTaskHandles[1] = &temperatureHandl;
-			sortedTaskHandles[2] = &heightHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &pressureHandl;
-			sortedTaskHandles[1] = &heightHandl;
-			sortedTaskHandles[2] = &temperatureHandl;
-		}
-	}
-	else if(deadlineHEIGHT < deadlineTEMPERATURE && deadlineHEIGHT < deadlinePRESSURE)
-	{
-		if(deadlineTEMPERATURE < deadlinePRESSURE)
-		{
-			sortedTaskHandles[0] = &heightHandl;
-			sortedTaskHandles[1] = &temperatureHandl;
-			sortedTaskHandles[2] = &pressureHandl;
-		}
-		else
-		{
-			sortedTaskHandles[0] = &heightHandl;
-			sortedTaskHandles[1] = &pressureHandl;
-			sortedTaskHandles[2] = &temperatureHandl;
-		}
-	}
-
-}
 */
-
 void printPriorityDeadlines()
 {
 	printf("Task:\t\tPriority\tDeadline\n");

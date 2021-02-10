@@ -17,13 +17,13 @@ int getHeight()
 	srand(time(0));
 	return (rand()%(1000-0+1))+0;
 }
-
+/*
 int getAngle()
 {
 	srand(time(0));
 	return (rand()%(359-0+1))+0;
 }
-
+*/
 long int gcdTwo(long int a, long int b)
 {
   if (b == 0)
